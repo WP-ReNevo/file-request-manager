@@ -1,0 +1,38 @@
+{
+	"name": "renevo-file-request-manager",
+	"version": "1.0.0",
+	"description": "ReNevo File Request Manager - build tooling and React apps.",
+	"author": "Renevo",
+	"private": true,
+	"license": "GPL-2.0-or-later",
+	"scripts": {
+		"build": "wp-scripts build",
+		"start": "wp-scripts start",
+		"lint:js": "wp-scripts lint-js ./src",
+		"lint:css": "wp-scripts lint-style",
+		"format": "wp-scripts format",
+		"test-unit-js": "wp-scripts test-unit-js",
+		"clean": "rimraf dist",
+		"copy": "node build-scripts/copy.js",
+		"bundle": "node build-scripts/bundle.js",
+		"make-pot": "node build-scripts/make-pot.js",
+		"plugin-zip": "npm run clean && npm run build && npm run make-pot && npm run copy && npm run bundle"
+	},
+	"devDependencies": {
+		"@wordpress/eslint-plugin": "^21.5.0",
+		"@wordpress/scripts": "31.8.0",
+		"archiver": "^7.0.1",
+		"fs-extra": "^11.4.0",
+		"rimraf": "^5.0.10",
+		"typescript": "5.6.3"
+	},
+	"dependencies": {
+		"@wordpress/api-fetch": "^7.53.0",
+		"@wordpress/block-editor": "^16.2.0",
+		"@wordpress/blocks": "^15.26.0",
+		"@wordpress/components": "^39.0.0",
+		"@wordpress/data": "^10.53.0",
+		"@wordpress/element": "^8.5.0",
+		"@wordpress/i18n": "^6.26.0"
+	}
+}

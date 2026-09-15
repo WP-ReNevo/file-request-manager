@@ -1,0 +1,21 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "renevo/file-request",
+	"title": "File Request",
+	"category": "widgets",
+	"icon": "media-document",
+	"description": "Embed a File Request so visitors can upload the specific files you asked for.",
+	"textdomain": "renevo-file-request-manager",
+	"attributes": {
+		"requestId": {
+			"type": "number",
+			"default": 0
+		}
+	},
+	"supports": {
+		"html": false
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css"
+}

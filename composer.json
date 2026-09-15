@@ -1,0 +1,36 @@
+{
+	"name": "renevo/file-request-manager",
+	"description": "Request specific files from clients and collect them through a simple upload page.",
+	"type": "wordpress-plugin",
+	"license": "GPL-2.0-or-later",
+	"authors": [
+		{
+			"name": "Renevo",
+			"homepage": "https://profiles.wordpress.org/renevo/"
+		}
+	],
+	"require": {
+		"php": ">=7.4"
+	},
+	"require-dev": {
+		"squizlabs/php_codesniffer": "^3.7",
+		"wp-coding-standards/wpcs": "^3.0",
+		"phpcompatibility/phpcompatibility-wp": "^2.1",
+		"yoast/phpunit-polyfills": "^2.0",
+		"wp-phpunit/wp-phpunit": "^6.4"
+	},
+	"autoload": {
+		"psr-4": {
+			"FileRequestManager\\": "includes/"
+		}
+	},
+	"config": {
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		}
+	},
+	"scripts": {
+		"phpcs": "phpcs",
+		"phpcbf": "phpcbf"
+	}
+}

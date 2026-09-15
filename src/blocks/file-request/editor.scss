@@ -1,0 +1,22 @@
+/**
+ * Block editor styles.
+ *
+ * Reuses the same scoped frontend stylesheet so the static canvas preview
+ * (rendered through the shared RequestHeader/RequestedFileCard components in
+ * "static" mode) looks like the real thing, plus a little editor-only
+ * framing.
+ */
+
+@use "../../frontend-app/style";
+
+.frm-block-static-preview {
+	max-width: none;
+	padding: 16px;
+	background: var(--frm-color-surface, #fff);
+	border: 1px solid var(--frm-color-border, #d5d7dc);
+	border-radius: 8px;
+}
+
+.frm-block-static-preview .frm-requested-files {
+	margin-bottom: 16px;
+}

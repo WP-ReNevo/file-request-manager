@@ -1,0 +1,1557 @@
+# Copyright (C) 2026 ReNevo
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: ReNevo File Request Manager 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/file-request-manager\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-09-18T12:56:15+02:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: renevo-file-request-manager\n"
+
+#. Plugin Name of the plugin
+#: renevo-file-request-manager.php
+msgid "ReNevo File Request Manager"
+msgstr ""
+
+#. Description of the plugin
+#: renevo-file-request-manager.php
+msgid "Request specific files from clients, customers and visitors. Tell them exactly what you need, let them upload it, and receive everything in one place."
+msgstr ""
+
+#. Author of the plugin
+#: renevo-file-request-manager.php
+#: includes/Privacy/Privacy.php:61
+#: includes/Privacy/Privacy.php:76
+#: includes/templates/admin/brand-header.php:19
+msgid "ReNevo"
+msgstr ""
+
+#. Author URI of the plugin
+#: renevo-file-request-manager.php
+msgid "https://profiles.wordpress.org/renevo/"
+msgstr ""
+
+#: includes/Admin/AdminMenu.php:37
+#: includes/Admin/AdminMenu.php:38
+#: includes/Admin/RequestsPage.php:53
+#: includes/Core/PostType.php:33
+msgid "File Requests"
+msgstr ""
+
+#: includes/Admin/AdminMenu.php:48
+#: includes/Admin/AdminMenu.php:49
+msgid "All Requests"
+msgstr ""
+
+#: includes/Admin/AdminMenu.php:57
+#: includes/Admin/AdminMenu.php:58
+#: includes/Admin/RequestsListTable.php:66
+#: includes/Admin/SubmissionsPage.php:59
+msgid "Submissions"
+msgstr ""
+
+#: includes/Admin/AdminMenu.php:66
+#: includes/Admin/AdminMenu.php:67
+msgid "Settings"
+msgstr ""
+
+#: includes/Admin/AdminMenu.php:75
+#: includes/Admin/AdminMenu.php:76
+#: includes/Core/PostType.php:34
+#: src/blocks/file-request/edit.js:117
+#: src/blocks/file-request/edit.js:152
+#: src/blocks/file-request/edit.js:159
+#: src/blocks/file-request/edit.js:189
+msgid "File Request"
+msgstr ""
+
+#: includes/Admin/EditorPage.php:28
+#: includes/Admin/RequestsPage.php:35
+#: includes/Admin/SettingsPage.php:29
+#: includes/Admin/SubmissionsPage.php:31
+msgid "You are not allowed to access this page."
+msgstr ""
+
+#: includes/Admin/RequestsListTable.php:63
+#: src/editor-app/components/RequestDetails.js:19
+#: src/editor-app/components/RequestedFileModal.js:65
+msgid "Title"
+msgstr ""
+
+#: includes/Admin/RequestsListTable.php:64
+#: includes/Admin/SubmissionsListTable.php:68
+msgid "Status"
+msgstr ""
+
+#: includes/Admin/RequestsListTable.php:65
+msgid "Shortcode"
+msgstr ""
+
+#: includes/Admin/RequestsListTable.php:67
+msgid "Date"
+msgstr ""
+
+#: includes/Admin/RequestsListTable.php:115
+#: src/blocks/file-request/edit.js:48
+msgid "(no title)"
+msgstr ""
+
+#: includes/Admin/RequestsListTable.php:118
+#: src/editor-app/components/RequestedFilesBuilder.js:241
+msgid "Edit"
+msgstr ""
+
+#: includes/Admin/RequestsListTable.php:119
+msgid "View submissions"
+msgstr ""
+
+#: includes/Admin/RequestsListTable.php:120
+#: src/editor-app/components/RequestedFilesBuilder.js:258
+msgid "Duplicate"
+msgstr ""
+
+#: includes/Admin/RequestsListTable.php:121
+msgid "Move this request to trash?"
+msgstr ""
+
+#: includes/Admin/RequestsListTable.php:121
+msgid "Trash"
+msgstr ""
+
+#: includes/Admin/RequestsListTable.php:139
+#: src/editor-app/components/PublishBar.js:43
+msgid "Published"
+msgstr ""
+
+#: includes/Admin/RequestsListTable.php:139
+#: src/editor-app/components/PublishBar.js:44
+msgid "Draft"
+msgstr ""
+
+#: includes/Admin/RequestsListTable.php:156
+msgid "Click to copy"
+msgstr ""
+
+#: includes/Admin/RequestsPage.php:56
+msgid "Add New"
+msgstr ""
+
+#: includes/Admin/RequestsPage.php:62
+msgid "Create a request, tell people exactly what you need, and collect everything in one place."
+msgstr ""
+
+#: includes/Admin/RequestsPage.php:67
+msgid "Active requests"
+msgstr ""
+
+#: includes/Admin/RequestsPage.php:71
+msgid "Submissions this week"
+msgstr ""
+
+#: includes/Admin/RequestsPage.php:75
+msgid "Awaiting review"
+msgstr ""
+
+#: includes/Admin/RequestsPage.php:79
+#: includes/Admin/SubmissionDetailPage.php:109
+msgid "Files received"
+msgstr ""
+
+#: includes/Admin/RequestsPage.php:85
+msgid "Search requests"
+msgstr ""
+
+#: includes/Admin/SubmissionDetailPage.php:59
+#: includes/Rest/SubmissionsController.php:293
+msgid "We couldn't find this submission."
+msgstr ""
+
+#: includes/Admin/SubmissionDetailPage.php:71
+msgid "← Back to submissions"
+msgstr ""
+
+#: includes/Admin/SubmissionDetailPage.php:85
+msgid "Requested files"
+msgstr ""
+
+#: includes/Admin/SubmissionDetailPage.php:89
+msgid "Submitter"
+msgstr ""
+
+#: includes/Admin/SubmissionDetailPage.php:90
+#: includes/Domain/Request.php:204
+#: includes/Privacy/Privacy.php:105
+#: src/editor-app/components/ContactFieldsSection.js:19
+#: src/shared/ContactFields.js:12
+msgid "Name"
+msgstr ""
+
+#: includes/Admin/SubmissionDetailPage.php:91
+#: includes/Domain/Request.php:205
+#: includes/Privacy/Privacy.php:109
+#: src/editor-app/components/ContactFieldsSection.js:20
+#: src/shared/ContactFields.js:16
+msgid "Email"
+msgstr ""
+
+#: includes/Admin/SubmissionDetailPage.php:93
+#: includes/Domain/Request.php:206
+#: includes/Privacy/Privacy.php:113
+#: src/editor-app/components/ContactFieldsSection.js:21
+#: src/shared/ContactFields.js:20
+msgid "Phone"
+msgstr ""
+
+#: includes/Admin/SubmissionDetailPage.php:96
+#: includes/Domain/Request.php:207
+#: includes/Privacy/Privacy.php:117
+#: src/editor-app/components/ContactFieldsSection.js:22
+#: src/shared/ContactFields.js:24
+msgid "Company"
+msgstr ""
+
+#: includes/Admin/SubmissionDetailPage.php:99
+#: includes/Domain/Request.php:208
+#: includes/Privacy/Privacy.php:121
+#: src/editor-app/components/ContactFieldsSection.js:23
+#: src/shared/ContactFields.js:28
+msgid "Message"
+msgstr ""
+
+#: includes/Admin/SubmissionDetailPage.php:101
+#: includes/Admin/SubmissionsListTable.php:65
+msgid "Request"
+msgstr ""
+
+#: includes/Admin/SubmissionDetailPage.php:101
+msgid "(deleted)"
+msgstr ""
+
+#: includes/Admin/SubmissionDetailPage.php:102
+#: includes/Privacy/Privacy.php:125
+msgid "Submitted at"
+msgstr ""
+
+#: includes/Admin/SubmissionDetailPage.php:136
+msgid "Update status"
+msgstr ""
+
+#: includes/Admin/SubmissionDetailPage.php:150
+msgid "No specific files were requested."
+msgstr ""
+
+#: includes/Admin/SubmissionDetailPage.php:162
+msgid "missing"
+msgstr ""
+
+#: includes/Admin/SubmissionDetailPage.php:179
+msgid "No files have been received yet."
+msgstr ""
+
+#: includes/Admin/SubmissionDetailPage.php:196
+msgid "File name"
+msgstr ""
+
+#: includes/Admin/SubmissionDetailPage.php:197
+msgid "Type"
+msgstr ""
+
+#: includes/Admin/SubmissionDetailPage.php:198
+msgid "Size"
+msgstr ""
+
+#: includes/Admin/SubmissionDetailPage.php:199
+#: src/shared/RequestedFileCard.js:69
+msgid "Uploaded"
+msgstr ""
+
+#: includes/Admin/SubmissionDetailPage.php:210
+msgid "Download"
+msgstr ""
+
+#: includes/Admin/SubmissionDetailPage.php:266
+msgid "Other files"
+msgstr ""
+
+#: includes/Admin/SubmissionDetailPage.php:287
+msgid "Download all"
+msgstr ""
+
+#: includes/Admin/SubmissionDetailPage.php:344
+#: includes/Admin/SubmissionsListTable.php:206
+msgid "Incomplete"
+msgstr ""
+
+#: includes/Admin/SubmissionDetailPage.php:345
+#: includes/Admin/SubmissionsListTable.php:207
+msgid "Complete"
+msgstr ""
+
+#: includes/Admin/SubmissionDetailPage.php:346
+#: includes/Admin/SubmissionsListTable.php:208
+msgid "Reviewed"
+msgstr ""
+
+#: includes/Admin/SubmissionDetailPage.php:347
+#: includes/Admin/SubmissionsListTable.php:209
+msgid "Archived"
+msgstr ""
+
+#: includes/Admin/SubmissionsListTable.php:63
+msgid "ID"
+msgstr ""
+
+#: includes/Admin/SubmissionsListTable.php:64
+msgid "Requester"
+msgstr ""
+
+#: includes/Admin/SubmissionsListTable.php:66
+msgid "Received"
+msgstr ""
+
+#: includes/Admin/SubmissionsListTable.php:67
+msgid "Progress"
+msgstr ""
+
+#: includes/Admin/SubmissionsListTable.php:124
+msgid "(no name)"
+msgstr ""
+
+#: includes/Admin/SubmissionsListTable.php:139
+msgid "(deleted request)"
+msgstr ""
+
+#: includes/Admin/SubmissionsListTable.php:178
+msgid "files"
+msgstr ""
+
+#. translators: 1: number of required files received, 2: total number of required files.
+#: includes/Admin/SubmissionsListTable.php:192
+#, php-format
+msgid "%1$d / %2$d required files"
+msgstr ""
+
+#: includes/Admin/SubmissionsPage.php:67
+msgid "Search submissions"
+msgstr ""
+
+#: includes/Domain/Request.php:136
+msgid "Thank you. Your documents have been received."
+msgstr ""
+
+#: includes/Domain/Request.php:152
+msgid "New file request submission: {request_title}"
+msgstr ""
+
+#. translators: email body with placeholders. Do not translate the {tokens}.
+#: includes/Domain/Request.php:154
+msgid ""
+"Hello,\n"
+"\n"
+"A new submission has been received.\n"
+"\n"
+"Request: {request_title}\n"
+"Submission: {submission_id}\n"
+"Name: {name}\n"
+"Email: {email}\n"
+"Files received: {file_count}"
+msgstr ""
+
+#: includes/Domain/Request.php:158
+msgid "We received your documents"
+msgstr ""
+
+#. translators: email body with placeholders. Do not translate the {tokens}.
+#: includes/Domain/Request.php:160
+msgid ""
+"Hello {name},\n"
+"\n"
+"We received your submission for:\n"
+"\n"
+"{request_title}\n"
+"\n"
+"Files received: {file_count}\n"
+"\n"
+"Thank you."
+msgstr ""
+
+#: includes/Domain/Request.php:203
+#: src/shared/ContactFields.js:54
+msgid "Your details"
+msgstr ""
+
+#: includes/Domain/Request.php:209
+#: src/shared/SubmitBar.js:40
+msgid "Submit"
+msgstr ""
+
+#: includes/Domain/Request.php:210
+#: src/editor-app/components/ContactFieldsSection.js:97
+#: src/editor-app/components/RequestedFileModal.js:76
+#: src/editor-app/components/RequestedFilesBuilder.js:190
+#: src/shared/RequestedFileCard.js:178
+msgid "Required"
+msgstr ""
+
+#: includes/Domain/Request.php:211
+#: src/editor-app/components/RequestedFilesBuilder.js:194
+#: src/shared/RequestedFileCard.js:181
+msgid "Optional"
+msgstr ""
+
+#. translators: %s is replaced with the list of accepted file types, e.g. "PDF, JPG". Keep the %s token.
+#. translators: %s: comma separated list of file types, e.g. "PDF, JPG".
+#: includes/Domain/Request.php:213
+#: src/shared/RequestedFileCard.js:185
+#, php-format,js-format
+msgid "Accepted: %s"
+msgstr ""
+
+#. translators: %d is replaced with the maximum size in megabytes. Keep the %d token.
+#. translators: %d: maximum file size in megabytes.
+#: includes/Domain/Request.php:215
+#: src/shared/RequestedFileCard.js:189
+#, php-format,js-format
+msgid "Maximum size: %d MB"
+msgstr ""
+
+#. translators: %d is replaced with the maximum number of files (this exact string is used when that number is 1). Keep the %d token.
+#. translators: %d: maximum number of files.
+#: includes/Domain/Request.php:217
+#: src/shared/RequestedFileCard.js:197
+#, php-format,js-format
+msgid "Up to %d file"
+msgstr ""
+
+#. translators: %d is replaced with the maximum number of files (this exact string is used when that number is greater than 1). Keep the %d token.
+#. translators: %d: maximum number of files.
+#: includes/Domain/Request.php:219
+#: src/shared/RequestedFileCard.js:194
+#, php-format,js-format
+msgid "Up to %d files"
+msgstr ""
+
+#: includes/Domain/Request.php:220
+#: src/editor-app/components/DesignOptionsPanel.js:145
+#: src/shared/RequestedFileCard.js:200
+msgid "Upload area"
+msgstr ""
+
+#: includes/Frontend/RequestRenderer.php:48
+msgid "This file request is not available."
+msgstr ""
+
+#: includes/Privacy/Privacy.php:97
+msgid "File Request Submissions"
+msgstr ""
+
+#: includes/Privacy/Privacy.php:101
+msgid "Submission ID"
+msgstr ""
+
+#: includes/Privacy/Privacy.php:129
+msgid "Files submitted"
+msgstr ""
+
+#. translators: %s: original request title.
+#: includes/Repositories/RequestRepository.php:153
+#, php-format
+msgid "%s (copy)"
+msgstr ""
+
+#: includes/Rest/PublicController.php:205
+msgid "This item isn't part of this request."
+msgstr ""
+
+#: includes/Rest/PublicController.php:210
+#: includes/Services/UploadValidator.php:132
+msgid "No file was received."
+msgstr ""
+
+#: includes/Rest/PublicController.php:223
+msgid "You have uploaded too much data recently. Please try again later."
+msgstr ""
+
+#: includes/Rest/PublicController.php:297
+msgid "You have already submitted your documents for this request."
+msgstr ""
+
+#. translators: %d: maximum number of files.
+#: includes/Rest/PublicController.php:324
+#, php-format
+msgid "Only %d file may be uploaded for this item."
+msgid_plural "Only %d files may be uploaded for this item."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/Rest/PublicController.php:397
+msgid "Please fill in all required fields."
+msgstr ""
+
+#: includes/Rest/PublicController.php:404
+msgid "Please enter a valid email address."
+msgstr ""
+
+#: includes/Rest/PublicController.php:429
+msgid "Your session has expired. Please refresh the page and try again."
+msgstr ""
+
+#: includes/Rest/PublicController.php:433
+msgid "Too many attempts. Please try again in a few minutes."
+msgstr ""
+
+#: includes/Rest/PublicController.php:439
+msgid "We couldn't process your submission. Please try again."
+msgstr ""
+
+#: includes/Rest/PublicController.php:548
+msgid "We couldn't load this request. Please refresh the page."
+msgstr ""
+
+#: includes/Rest/RequestsController.php:319
+msgid "We couldn't find this request."
+msgstr ""
+
+#: includes/Rest/SubmissionsController.php:186
+msgid "That status is not valid."
+msgstr ""
+
+#: includes/Rest/SubmissionsController.php:250
+msgid "There are no files to download."
+msgstr ""
+
+#: includes/Services/AllowedFileTypes.php:27
+msgid "PDF"
+msgstr ""
+
+#: includes/Services/AllowedFileTypes.php:32
+msgid "JPG / JPEG"
+msgstr ""
+
+#: includes/Services/AllowedFileTypes.php:37
+msgid "PNG"
+msgstr ""
+
+#: includes/Services/AllowedFileTypes.php:42
+msgid "GIF"
+msgstr ""
+
+#: includes/Services/AllowedFileTypes.php:47
+msgid "WEBP"
+msgstr ""
+
+#: includes/Services/AllowedFileTypes.php:52
+msgid "DOC"
+msgstr ""
+
+#: includes/Services/AllowedFileTypes.php:57
+msgid "DOCX"
+msgstr ""
+
+#: includes/Services/AllowedFileTypes.php:62
+msgid "XLS"
+msgstr ""
+
+#: includes/Services/AllowedFileTypes.php:67
+msgid "XLSX"
+msgstr ""
+
+#: includes/Services/AllowedFileTypes.php:72
+msgid "ZIP"
+msgstr ""
+
+#: includes/Services/FileStorageService.php:85
+#: includes/Services/FileStorageService.php:94
+msgid "The file could not be saved. Please try again."
+msgstr ""
+
+#: includes/Services/FileStorageService.php:213
+#: includes/Services/FileStorageService.php:264
+msgid "This file is no longer available."
+msgstr ""
+
+#: includes/Services/FileStorageService.php:234
+msgid "ZIP support is not available on this server."
+msgstr ""
+
+#: includes/Services/FileStorageService.php:241
+msgid "The ZIP file could not be created."
+msgstr ""
+
+#: includes/Services/FormDesignRegistry.php:64
+msgid "Classic"
+msgstr ""
+
+#: includes/Services/FormDesignRegistry.php:65
+msgid "Clean and familiar, with a subtle border."
+msgstr ""
+
+#: includes/Services/FormDesignRegistry.php:93
+msgid "Modern"
+msgstr ""
+
+#: includes/Services/FormDesignRegistry.php:94
+msgid "Rounded corners, a violet accent, requested files as tiles."
+msgstr ""
+
+#: includes/Services/FormDesignRegistry.php:122
+#: includes/Services/FormLayoutRegistry.php:40
+msgid "Editorial"
+msgstr ""
+
+#: includes/Services/FormDesignRegistry.php:123
+#: includes/Services/FormLayoutRegistry.php:41
+msgid "Borderless, numbered entries, big bold type."
+msgstr ""
+
+#: includes/Services/FormLayoutRegistry.php:32
+msgid "Stacked"
+msgstr ""
+
+#: includes/Services/FormLayoutRegistry.php:33
+msgid "One column, requested files listed top to bottom."
+msgstr ""
+
+#: includes/Services/FormLayoutRegistry.php:36
+msgid "Grid"
+msgstr ""
+
+#: includes/Services/FormLayoutRegistry.php:37
+msgid "Requested files arranged as tiles."
+msgstr ""
+
+#: includes/Services/NotificationService.php:65
+#: src/editor-app/components/EmailPreview.js:85
+msgid "View submission"
+msgstr ""
+
+#: includes/Services/TemplateRegistry.php:91
+msgid "General document request"
+msgstr ""
+
+#: includes/Services/TemplateRegistry.php:92
+msgid "A simple starting point for requesting one or more documents."
+msgstr ""
+
+#: includes/Services/TemplateRegistry.php:94
+msgid "Document"
+msgstr ""
+
+#: includes/Services/TemplateRegistry.php:94
+msgid "Please upload a clear scan or photo."
+msgstr ""
+
+#: includes/Services/TemplateRegistry.php:107
+msgid "Company registration"
+msgstr ""
+
+#: includes/Services/TemplateRegistry.php:108
+msgid "Documents required to start your company."
+msgstr ""
+
+#: includes/Services/TemplateRegistry.php:110
+#: includes/Services/TemplateRegistry.php:129
+#: includes/Services/TemplateRegistry.php:200
+msgid "Identity document"
+msgstr ""
+
+#: includes/Services/TemplateRegistry.php:110
+msgid "Please upload a clear scan or photo of your identity document."
+msgstr ""
+
+#: includes/Services/TemplateRegistry.php:111
+#: includes/Services/TemplateRegistry.php:201
+msgid "Proof of address"
+msgstr ""
+
+#: includes/Services/TemplateRegistry.php:111
+msgid "A recent utility bill or bank statement showing your address."
+msgstr ""
+
+#: includes/Services/TemplateRegistry.php:112
+msgid "Signed contract"
+msgstr ""
+
+#: includes/Services/TemplateRegistry.php:113
+msgid "Company documents"
+msgstr ""
+
+#: includes/Services/TemplateRegistry.php:126
+msgid "Client onboarding"
+msgstr ""
+
+#: includes/Services/TemplateRegistry.php:127
+msgid "Everything needed to get a new client set up."
+msgstr ""
+
+#: includes/Services/TemplateRegistry.php:130
+msgid "Signed agreement"
+msgstr ""
+
+#: includes/Services/TemplateRegistry.php:143
+msgid "Tax documents"
+msgstr ""
+
+#: includes/Services/TemplateRegistry.php:144
+msgid "Documents for your monthly accounting."
+msgstr ""
+
+#: includes/Services/TemplateRegistry.php:146
+msgid "Invoices"
+msgstr ""
+
+#: includes/Services/TemplateRegistry.php:147
+msgid "Bank statements"
+msgstr ""
+
+#: includes/Services/TemplateRegistry.php:148
+msgid "Receipts"
+msgstr ""
+
+#: includes/Services/TemplateRegistry.php:161
+msgid "Website content"
+msgstr ""
+
+#: includes/Services/TemplateRegistry.php:162
+msgid "Content needed for your website."
+msgstr ""
+
+#: includes/Services/TemplateRegistry.php:164
+msgid "Logo"
+msgstr ""
+
+#: includes/Services/TemplateRegistry.php:165
+msgid "Company photos"
+msgstr ""
+
+#: includes/Services/TemplateRegistry.php:166
+msgid "Team photos"
+msgstr ""
+
+#: includes/Services/TemplateRegistry.php:167
+msgid "Brand assets"
+msgstr ""
+
+#: includes/Services/TemplateRegistry.php:180
+msgid "Job application"
+msgstr ""
+
+#: includes/Services/TemplateRegistry.php:181
+msgid "Documents required to apply for a position."
+msgstr ""
+
+#: includes/Services/TemplateRegistry.php:183
+msgid "Resume / CV"
+msgstr ""
+
+#: includes/Services/TemplateRegistry.php:184
+msgid "Cover letter"
+msgstr ""
+
+#: includes/Services/TemplateRegistry.php:197
+#: includes/Services/TemplateRegistry.php:202
+msgid "Property documents"
+msgstr ""
+
+#: includes/Services/TemplateRegistry.php:198
+msgid "Documents required for your property."
+msgstr ""
+
+#: includes/Services/TemplateRegistry.php:215
+msgid "Photo submission"
+msgstr ""
+
+#: includes/Services/TemplateRegistry.php:216
+msgid "Files required for your project."
+msgstr ""
+
+#: includes/Services/TemplateRegistry.php:218
+msgid "Original photos"
+msgstr ""
+
+#: includes/Services/TemplateRegistry.php:219
+msgid "References"
+msgstr ""
+
+#: includes/Services/UploadValidator.php:36
+msgid "This upload could not be verified. Please try again."
+msgstr ""
+
+#: includes/Services/UploadValidator.php:43
+#: includes/Services/UploadValidator.php:49
+#: includes/Services/UploadValidator.php:55
+#: includes/Services/UploadValidator.php:61
+msgid "This file type isn't allowed for this request."
+msgstr ""
+
+#: includes/Services/UploadValidator.php:67
+msgid "This file appears to be empty."
+msgstr ""
+
+#. translators: %s: maximum file size, e.g. "10 MB".
+#: includes/Services/UploadValidator.php:75
+#, php-format
+msgid "This file is larger than the allowed maximum of %s."
+msgstr ""
+
+#: includes/Services/UploadValidator.php:110
+#: src/frontend-app/App.js:107
+msgid "Please upload the following required file(s):"
+msgstr ""
+
+#: includes/Services/UploadValidator.php:128
+msgid "This file is too large for this server to accept."
+msgstr ""
+
+#: includes/Services/UploadValidator.php:130
+msgid "The file was only partially uploaded. Please try again."
+msgstr ""
+
+#: includes/Services/UploadValidator.php:134
+msgid "This file could not be uploaded. Please try again."
+msgstr ""
+
+#: src/blocks/file-request/edit.js:55
+msgid "Could not load File Requests."
+msgstr ""
+
+#: src/blocks/file-request/edit.js:92
+msgid "Could not load this File Request."
+msgstr ""
+
+#: src/blocks/file-request/edit.js:120
+msgid "Select a File Request"
+msgstr ""
+
+#: src/blocks/file-request/edit.js:135
+#: src/blocks/file-request/edit.js:230
+msgid "Edit File Request"
+msgstr ""
+
+#: src/blocks/file-request/edit.js:153
+msgid "Choose a File Request to embed on this page."
+msgstr ""
+
+#: src/editor-app/App.js:68
+msgid "We couldn't load this File Request."
+msgstr ""
+
+#: src/editor-app/components/ContactFieldsSection.js:35
+msgid "Position on the page"
+msgstr ""
+
+#: src/editor-app/components/ContactFieldsSection.js:43
+msgid "Above the requested files"
+msgstr ""
+
+#: src/editor-app/components/ContactFieldsSection.js:50
+msgid "Below the requested files"
+msgstr ""
+
+#: src/editor-app/components/ContactFieldsSection.js:63
+msgid "Where \"Your details\" appears on the public page."
+msgstr ""
+
+#: src/editor-app/components/DesignOptionsPanel.js:18
+msgid "System UI"
+msgstr ""
+
+#: src/editor-app/components/DesignOptionsPanel.js:19
+msgid "Sans-serif"
+msgstr ""
+
+#: src/editor-app/components/DesignOptionsPanel.js:20
+msgid "Serif"
+msgstr ""
+
+#: src/editor-app/components/DesignOptionsPanel.js:23
+msgid "Monospace"
+msgstr ""
+
+#: src/editor-app/components/DesignOptionsPanel.js:35
+msgid "Colors"
+msgstr ""
+
+#: src/editor-app/components/DesignOptionsPanel.js:40
+msgid "Overall background color"
+msgstr ""
+
+#: src/editor-app/components/DesignOptionsPanel.js:51
+#: src/editor-app/components/DesignOptionsPanel.js:184
+msgid "Background color"
+msgstr ""
+
+#: src/editor-app/components/DesignOptionsPanel.js:62
+msgid "Border color"
+msgstr ""
+
+#: src/editor-app/components/DesignOptionsPanel.js:71
+#: src/editor-app/components/DesignOptionsPanel.js:195
+msgid "Hover color"
+msgstr ""
+
+#: src/editor-app/components/DesignOptionsPanel.js:77
+msgid "\"Required\" badge color"
+msgstr ""
+
+#: src/editor-app/components/DesignOptionsPanel.js:91
+msgid "Typography"
+msgstr ""
+
+#: src/editor-app/components/DesignOptionsPanel.js:95
+msgid "Font family"
+msgstr ""
+
+#: src/editor-app/components/DesignOptionsPanel.js:101
+msgid "Font size (px)"
+msgstr ""
+
+#: src/editor-app/components/DesignOptionsPanel.js:116
+msgid "Layout & spacing"
+msgstr ""
+
+#: src/editor-app/components/DesignOptionsPanel.js:121
+msgid "Border radius (px)"
+msgstr ""
+
+#: src/editor-app/components/DesignOptionsPanel.js:131
+msgid "Padding (px)"
+msgstr ""
+
+#: src/editor-app/components/DesignOptionsPanel.js:149
+msgid "Upload widget style"
+msgstr ""
+
+#: src/editor-app/components/DesignOptionsPanel.js:157
+msgid "Drag & drop area"
+msgstr ""
+
+#: src/editor-app/components/DesignOptionsPanel.js:164
+msgid "Simple upload button"
+msgstr ""
+
+#: src/editor-app/components/DesignOptionsPanel.js:178
+msgid "Submit button"
+msgstr ""
+
+#: src/editor-app/components/DesignOptionsPanel.js:203
+msgid "Border color (optional)"
+msgstr ""
+
+#: src/editor-app/components/DesignOptionsPanel.js:213
+msgid "Position"
+msgstr ""
+
+#: src/editor-app/components/DesignOptionsPanel.js:218
+msgid "Left"
+msgstr ""
+
+#: src/editor-app/components/DesignOptionsPanel.js:225
+msgid "Center"
+msgstr ""
+
+#: src/editor-app/components/DesignOptionsPanel.js:232
+msgid "Right"
+msgstr ""
+
+#: src/editor-app/components/DesignOptionsPanel.js:248
+msgid "Content layout"
+msgstr ""
+
+#: src/editor-app/components/DesignOptionsPanel.js:253
+msgid "Description position"
+msgstr ""
+
+#: src/editor-app/components/DesignOptionsPanel.js:257
+msgid "The title always stays above the upload area — this only moves the optional description text."
+msgstr ""
+
+#: src/editor-app/components/DesignOptionsPanel.js:265
+msgid "Above the upload area"
+msgstr ""
+
+#: src/editor-app/components/DesignOptionsPanel.js:272
+msgid "Below the upload area"
+msgstr ""
+
+#: src/editor-app/components/EditorLivePreview.js:41
+#: src/editor-app/components/EmailPreview.js:60
+msgid "Untitled request"
+msgstr ""
+
+#: src/editor-app/components/EditorScreen.js:24
+msgid "Request details"
+msgstr ""
+
+#: src/editor-app/components/EditorScreen.js:28
+msgid "Files you need"
+msgstr ""
+
+#: src/editor-app/components/EditorScreen.js:32
+msgid "Your contact details"
+msgstr ""
+
+#: src/editor-app/components/EditorScreen.js:36
+msgid "Submission settings"
+msgstr ""
+
+#: src/editor-app/components/EditorScreen.js:38
+msgid "Form Design"
+msgstr ""
+
+#: src/editor-app/components/EditorScreen.js:41
+msgid "Text & Labels"
+msgstr ""
+
+#: src/editor-app/components/EditorScreen.js:45
+msgid "Notifications"
+msgstr ""
+
+#: src/editor-app/components/EditorScreen.js:88
+msgid "Published."
+msgstr ""
+
+#: src/editor-app/components/EditorScreen.js:89
+msgid "Draft saved."
+msgstr ""
+
+#: src/editor-app/components/EditorScreen.js:94
+msgid "Could not save. Please try again."
+msgstr ""
+
+#: src/editor-app/components/EmailPreview.js:38
+#: src/editor-app/components/NotificationsSection.js:99
+msgid "Admin notification"
+msgstr ""
+
+#: src/editor-app/components/EmailPreview.js:42
+#: src/editor-app/components/NotificationsSection.js:145
+msgid "Requester confirmation"
+msgstr ""
+
+#: src/editor-app/components/EmailPreview.js:105
+msgid "This email is currently turned off — this is a preview of what it would look like if enabled."
+msgstr ""
+
+#: src/editor-app/components/EmailPreview.js:114
+msgid "Email preview"
+msgstr ""
+
+#: src/editor-app/components/FormDesignSection.js:34
+#: src/editor-app/components/StartScreen.js:72
+msgid "Templates"
+msgstr ""
+
+#: src/editor-app/components/FormDesignSection.js:37
+msgid "Each template pairs a distinct look with a distinct structure — pick one, then fine-tune anything below."
+msgstr ""
+
+#: src/editor-app/components/FormDesignSection.js:50
+msgid "Layout"
+msgstr ""
+
+#: src/editor-app/components/FormDesignSection.js:62
+msgid "Design options"
+msgstr ""
+
+#: src/editor-app/components/LayoutOptionsPanel.js:20
+msgid "Layout options"
+msgstr ""
+
+#: src/editor-app/components/LayoutOptionsPanel.js:24
+msgid "Requested-file blocks"
+msgstr ""
+
+#: src/editor-app/components/LayoutOptionsPanel.js:32
+#: src/editor-app/components/LayoutOptionsPanel.js:57
+msgid "Bordered box (default)"
+msgstr ""
+
+#: src/editor-app/components/LayoutOptionsPanel.js:39
+#: src/editor-app/components/LayoutOptionsPanel.js:64
+msgid "Flat, no border"
+msgstr ""
+
+#: src/editor-app/components/LayoutOptionsPanel.js:49
+msgid "\"Your details\" block"
+msgstr ""
+
+#: src/editor-app/components/LayoutOptionsPanel.js:74
+msgid "\"Required\" indicator"
+msgstr ""
+
+#: src/editor-app/components/LayoutOptionsPanel.js:78
+msgid "A required file always shows one of these — it can never be hidden entirely."
+msgstr ""
+
+#: src/editor-app/components/LayoutOptionsPanel.js:86
+msgid "Badge (default)"
+msgstr ""
+
+#: src/editor-app/components/LayoutOptionsPanel.js:93
+msgid "Asterisk (*)"
+msgstr ""
+
+#: src/editor-app/components/LayoutOptionsPanel.js:103
+msgid "Show \"Optional\" badge"
+msgstr ""
+
+#: src/editor-app/components/NotificationsSection.js:63
+msgid "Available placeholders:"
+msgstr ""
+
+#: src/editor-app/components/NotificationsSection.js:72
+msgid "Insert into the body above (also copied to clipboard)"
+msgstr ""
+
+#: src/editor-app/components/NotificationsSection.js:107
+msgid "Notify an admin on new submissions"
+msgstr ""
+
+#: src/editor-app/components/NotificationsSection.js:117
+msgid "Admin email"
+msgstr ""
+
+#: src/editor-app/components/NotificationsSection.js:123
+#: src/editor-app/components/NotificationsSection.js:188
+msgid "Subject"
+msgstr ""
+
+#: src/editor-app/components/NotificationsSection.js:129
+#: src/editor-app/components/NotificationsSection.js:196
+msgid "Body"
+msgstr ""
+
+#: src/editor-app/components/NotificationsSection.js:153
+msgid "Send a confirmation email to the requester"
+msgstr ""
+
+#: src/editor-app/components/NotificationsSection.js:166
+msgid "From name"
+msgstr ""
+
+#: src/editor-app/components/NotificationsSection.js:176
+msgid "From email"
+msgstr ""
+
+#: src/editor-app/components/PreviewPanel.js:56
+#: src/editor-app/components/PublishBar.js:50
+msgid "Preview"
+msgstr ""
+
+#: src/editor-app/components/PreviewPanel.js:63
+msgid "Preview — submissions are disabled. Nothing here is sent to the server."
+msgstr ""
+
+#: src/editor-app/components/PreviewPanel.js:73
+msgid "Desktop"
+msgstr ""
+
+#: src/editor-app/components/PreviewPanel.js:79
+msgid "Mobile"
+msgstr ""
+
+#: src/editor-app/components/PreviewPanel.js:103
+#: src/frontend-app/App.js:103
+msgid "Thank you"
+msgstr ""
+
+#: src/editor-app/components/PublishBar.js:24
+msgid "← Back to requests"
+msgstr ""
+
+#: src/editor-app/components/PublishBar.js:31
+msgid "(untitled request)"
+msgstr ""
+
+#: src/editor-app/components/PublishBar.js:58
+msgid "Save Draft"
+msgstr ""
+
+#: src/editor-app/components/PublishBar.js:66
+msgid "Publish"
+msgstr ""
+
+#: src/editor-app/components/RequestDetails.js:24
+msgid "Shown to visitors at the top of the request."
+msgstr ""
+
+#: src/editor-app/components/RequestDetails.js:31
+#: src/editor-app/components/RequestedFileModal.js:70
+msgid "Description"
+msgstr ""
+
+#: src/editor-app/components/RequestDetails.js:32
+msgid "Shown under the title. Scripts and unsafe tags are stripped when saved."
+msgstr ""
+
+#: src/editor-app/components/RequestedFileModal.js:58
+msgid "Edit requested file"
+msgstr ""
+
+#: src/editor-app/components/RequestedFileModal.js:59
+msgid "Add requested file"
+msgstr ""
+
+#: src/editor-app/components/RequestedFileModal.js:83
+msgid "Allowed file types"
+msgstr ""
+
+#: src/editor-app/components/RequestedFileModal.js:101
+msgid "Max size (MB)"
+msgstr ""
+
+#: src/editor-app/components/RequestedFileModal.js:108
+msgid "Max number of files"
+msgstr ""
+
+#: src/editor-app/components/RequestedFileModal.js:122
+msgid "Cancel"
+msgstr ""
+
+#: src/editor-app/components/RequestedFileModal.js:129
+msgid "Save"
+msgstr ""
+
+#: src/editor-app/components/RequestedFilesBuilder.js:106
+msgid "You haven't added any requested files yet."
+msgstr ""
+
+#: src/editor-app/components/RequestedFilesBuilder.js:145
+msgid "Drag to reorder, or use the arrow keys."
+msgstr ""
+
+#: src/editor-app/components/RequestedFilesBuilder.js:177
+msgid "(untitled)"
+msgstr ""
+
+#: src/editor-app/components/RequestedFilesBuilder.js:207
+msgid "Any file type"
+msgstr ""
+
+#. translators: %d: maximum size in megabytes.
+#: src/editor-app/components/RequestedFilesBuilder.js:214
+#, js-format
+msgid "Max %d MB"
+msgstr ""
+
+#. translators: %d: maximum number of files.
+#: src/editor-app/components/RequestedFilesBuilder.js:223
+#, js-format
+msgid "%d file"
+msgid_plural "%d files"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/editor-app/components/RequestedFilesBuilder.js:276
+msgid "Delete"
+msgstr ""
+
+#: src/editor-app/components/RequestedFilesBuilder.js:292
+msgid "+ Add requested file"
+msgstr ""
+
+#: src/editor-app/components/StartScreen.js:30
+msgid "Could not load templates."
+msgstr ""
+
+#: src/editor-app/components/StartScreen.js:51
+msgid "Create a File Request"
+msgstr ""
+
+#: src/editor-app/components/StartScreen.js:54
+msgid "Start from a template, or build your request from scratch."
+msgstr ""
+
+#: src/editor-app/components/StartScreen.js:68
+msgid "Start from scratch"
+msgstr ""
+
+#: src/editor-app/components/StartScreen.js:88
+msgid "Use this template"
+msgstr ""
+
+#: src/editor-app/components/SubmissionSettingsSection.js:25
+msgid "Success message"
+msgstr ""
+
+#: src/editor-app/components/SubmissionSettingsSection.js:28
+msgid "Shown after a successful submission (unless a redirect URL is set below)."
+msgstr ""
+
+#: src/editor-app/components/SubmissionSettingsSection.js:35
+msgid "Redirect URL (optional)"
+msgstr ""
+
+#: src/editor-app/components/SubmissionSettingsSection.js:41
+msgid "If set, the visitor is redirected here instead of seeing the success message."
+msgstr ""
+
+#: src/editor-app/components/SubmissionSettingsSection.js:48
+msgid "Allow multiple submissions"
+msgstr ""
+
+#: src/editor-app/components/SubmissionSettingsSection.js:56
+msgid "When off, a second submission from the same email address is rejected."
+msgstr ""
+
+#: src/editor-app/components/TextLabelsSection.js:14
+msgid "Contact form"
+msgstr ""
+
+#: src/editor-app/components/TextLabelsSection.js:18
+msgid "\"Your details\" heading"
+msgstr ""
+
+#: src/editor-app/components/TextLabelsSection.js:26
+msgid "Name field label"
+msgstr ""
+
+#: src/editor-app/components/TextLabelsSection.js:34
+msgid "Email field label"
+msgstr ""
+
+#: src/editor-app/components/TextLabelsSection.js:42
+msgid "Phone field label"
+msgstr ""
+
+#: src/editor-app/components/TextLabelsSection.js:50
+msgid "Company field label"
+msgstr ""
+
+#: src/editor-app/components/TextLabelsSection.js:58
+msgid "Message field label"
+msgstr ""
+
+#: src/editor-app/components/TextLabelsSection.js:66
+msgid "Submit button text"
+msgstr ""
+
+#: src/editor-app/components/TextLabelsSection.js:81
+msgid "Requested-file cards"
+msgstr ""
+
+#: src/editor-app/components/TextLabelsSection.js:89
+msgid "\"Required\" badge text"
+msgstr ""
+
+#: src/editor-app/components/TextLabelsSection.js:97
+msgid "\"Optional\" badge text"
+msgstr ""
+
+#: src/editor-app/components/TextLabelsSection.js:105
+msgid "Accepted file types text"
+msgstr ""
+
+#. translators: %s explanation.
+#: src/editor-app/components/TextLabelsSection.js:114
+#, js-format
+msgid "%s is replaced with the list of accepted file types."
+msgstr ""
+
+#: src/editor-app/components/TextLabelsSection.js:121
+msgid "Maximum size text"
+msgstr ""
+
+#. translators: %d explanation.
+#: src/editor-app/components/TextLabelsSection.js:128
+#, js-format
+msgid "%d is replaced with the maximum size in MB."
+msgstr ""
+
+#: src/editor-app/components/TextLabelsSection.js:135
+msgid "File count text (one file)"
+msgstr ""
+
+#. translators: %d explanation.
+#: src/editor-app/components/TextLabelsSection.js:142
+#, js-format
+msgid "Used when the maximum is exactly 1 file. %d is replaced with the number."
+msgstr ""
+
+#: src/editor-app/components/TextLabelsSection.js:149
+msgid "File count text (multiple files)"
+msgstr ""
+
+#. translators: %d explanation.
+#: src/editor-app/components/TextLabelsSection.js:158
+#, js-format
+msgid "Used when the maximum is more than 1 file. %d is replaced with the number."
+msgstr ""
+
+#: src/editor-app/components/TextLabelsSection.js:165
+msgid "Upload area placeholder text"
+msgstr ""
+
+#: src/editor-app/components/TextLabelsSection.js:173
+msgid "Shown only in non-interactive previews (this tab, the block editor)."
+msgstr ""
+
+#: src/frontend-app/App.js:44
+msgid "File added, uploading…"
+msgstr ""
+
+#: src/frontend-app/App.js:83
+msgid "Submission received."
+msgstr ""
+
+#: src/frontend-app/App.js:89
+msgid "Something went wrong. Please try again."
+msgstr ""
+
+#: src/settings-app/App.js:48
+msgid "Could not load settings."
+msgstr ""
+
+#: src/settings-app/App.js:90
+msgid "Settings saved."
+msgstr ""
+
+#: src/settings-app/App.js:94
+msgid "Could not save settings. Please try again."
+msgstr ""
+
+#: src/settings-app/App.js:128
+msgid "File Request Settings"
+msgstr ""
+
+#: src/settings-app/App.js:142
+msgid "Saving…"
+msgstr ""
+
+#: src/settings-app/App.js:143
+msgid "Save changes"
+msgstr ""
+
+#: src/settings-app/App.js:174
+msgid "General"
+msgstr ""
+
+#: src/settings-app/App.js:178
+msgid "Default maximum file size (MB)"
+msgstr ""
+
+#: src/settings-app/App.js:194
+msgid "Default allowed file types"
+msgstr ""
+
+#: src/settings-app/App.js:215
+msgid "Default notification email"
+msgstr ""
+
+#: src/settings-app/App.js:230
+msgid "Privacy"
+msgstr ""
+
+#: src/settings-app/App.js:234
+msgid "Store submitter IP address"
+msgstr ""
+
+#: src/settings-app/App.js:238
+msgid "Off by default. The IP address is one-way hashed, not stored in plain text — for abuse prevention only."
+msgstr ""
+
+#: src/settings-app/App.js:248
+msgid "Data retention (days, 0 = keep forever)"
+msgstr ""
+
+#: src/settings-app/App.js:258
+msgid "Submissions and their files are permanently deleted after this many days."
+msgstr ""
+
+#: src/settings-app/App.js:264
+msgid "Delete all data on uninstall"
+msgstr ""
+
+#: src/settings-app/App.js:268
+msgid "Off by default. Your requests and submissions are kept unless you enable this."
+msgstr ""
+
+#: src/shared/ContactFields.js:114
+msgid "Leave this field empty"
+msgstr ""
+
+#: src/shared/RequestedFileCard.js:65
+msgid "Waiting…"
+msgstr ""
+
+#: src/shared/RequestedFileCard.js:67
+msgid "Uploading…"
+msgstr ""
+
+#: src/shared/RequestedFileCard.js:71
+msgid "Failed"
+msgstr ""
+
+#: src/shared/RequestedFileCard.js:131
+msgid "Try again"
+msgstr ""
+
+#. translators: %s: file name.
+#: src/shared/RequestedFileCard.js:143
+#, js-format
+msgid "Remove %s"
+msgstr ""
+
+#. translators: %s: requested file title.
+#: src/shared/RequestedFileCard.js:270
+#, js-format
+msgid "Upload %s"
+msgstr ""
+
+#: src/shared/RequestedFileCard.js:295
+msgid "This file is required but hasn’t been uploaded yet."
+msgstr ""
+
+#: src/shared/RequestedFileCard.js:312
+#: src/shared/UploadDropzone.js:42
+msgid "Choose a file"
+msgstr ""
+
+#. translators: %s: comma separated list of missing required file titles.
+#: src/shared/SubmitBar.js:19
+#, js-format
+msgid "Please upload the following required file(s): %s"
+msgstr ""
+
+#: src/shared/SubmitBar.js:39
+msgid "Submitting…"
+msgstr ""
+
+#: src/shared/UploadDropzone.js:90
+msgid "Click to browse or drag and drop a file here"
+msgstr ""
+
+#: src/shared/UploadDropzone.js:121
+msgid "Drag and drop a file here, or"
+msgstr ""
+
+#: src/shared/UploadDropzone.js:126
+msgid "browse"
+msgstr ""
+
+#: src/shared/useUploadManager.js:58
+msgid "The upload failed. Please try again."
+msgstr ""
+
+#. translators: %d: maximum file size in megabytes.
+#: src/shared/useUploadManager.js:89
+#, js-format
+msgid "This file is larger than the allowed maximum of %d MB."
+msgstr ""
+
+#: src/blocks/file-request/block.json
+msgctxt "block title"
+msgid "File Request"
+msgstr ""
+
+#: src/blocks/file-request/block.json
+msgctxt "block description"
+msgid "Embed a File Request so visitors can upload the specific files you asked for."
+msgstr ""

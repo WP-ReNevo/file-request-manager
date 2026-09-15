@@ -1,0 +1,23 @@
+{
+	"extends": ["plugin:@wordpress/eslint-plugin/recommended"],
+	"env": {
+		"browser": true
+	},
+	"settings": {
+		"jsdoc": {
+			"mode": "typescript"
+		}
+	},
+	"rules": {
+		"jsdoc/require-param": "off",
+		"jsdoc/require-returns": "off"
+	},
+	"overrides": [
+		{
+			"files": ["**/*.test.js"],
+			"env": {
+				"jest": true
+			}
+		}
+	]
+}

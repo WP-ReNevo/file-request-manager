@@ -1,0 +1,402 @@
+/**
+ * Styles for the plain PHP-rendered admin screens: Dashboard, Requests
+ * list, Submissions list/detail, Settings. These are native WP_List_Table /
+ * `.wrap`-based screens, not React — this file only supplements core
+ * wp-admin styling with the plugin-specific classes those PHP templates
+ * already render (see includes/Admin/*.php for the exact markup), using
+ * the same design tokens as the editor app for a consistent look.
+ */
+
+@use "sass:color";
+
+$frm-primary: #2563eb;
+$frm-primary-dark: #1d4ed8;
+$frm-text: #1e1e2e;
+$frm-muted: #6b7280;
+$frm-border: #e2e4e9;
+$frm-surface: #fff;
+$frm-surface-subtle: #f8f9fb;
+$frm-radius: 10px;
+$frm-radius-sm: 6px;
+$frm-shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 1px 3px rgba(16, 24, 40, 0.06);
+$frm-shadow-md: 0 4px 10px rgba(16, 24, 40, 0.06), 0 2px 4px rgba(16, 24, 40, 0.04);
+
+/* Full-bleed white/gray shell, matching the editor app's .frm-editor-page */
+
+.frm-admin-page {
+	margin: 0 0 0 -20px;
+	width: calc(100% + 20px);
+	padding: 0 0 40px;
+	background: $frm-surface-subtle;
+}
+
+.frm-brand-header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	padding: 20px 0;
+	background: #fff;
+	border-bottom: 1px solid $frm-border;
+}
+
+.frm-brand-header__title {
+	font-size: 18px;
+	font-weight: 600;
+	color: $frm-text;
+}
+
+.frm-admin-page__body {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 24px 32px 0;
+}
+
+.frm-admin-page h1.wp-heading-inline {
+	font-size: 22px;
+	font-weight: 700;
+	letter-spacing: -0.01em;
+}
+
+.frm-admin-page .page-title-action {
+	border-radius: $frm-radius-sm;
+	font-weight: 600;
+}
+
+/* Sticky page header (Requests/Submissions list, Submission detail) */
+
+.frm-page-header {
+	position: sticky;
+	top: 32px;
+	z-index: 10;
+	padding: 18px 32px;
+	background: rgba(255, 255, 255, 0.92);
+	backdrop-filter: saturate(180%) blur(10px);
+	border-bottom: 1px solid $frm-border;
+	box-shadow: 0 1px 0 rgba(16, 24, 40, 0.02);
+}
+
+.frm-page-header__row {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.frm-page-header__back {
+	display: inline-flex;
+	align-items: center;
+	margin-bottom: 6px;
+	font-size: 13px;
+	font-weight: 600;
+	color: $frm-muted;
+	text-decoration: none;
+}
+
+.frm-page-header__back:hover {
+	color: $frm-primary;
+}
+
+.frm-page-header__title h1 {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin: 0;
+	font-size: 20px;
+	font-weight: 700;
+	letter-spacing: -0.01em;
+	color: $frm-text;
+}
+
+.frm-page-header__actions {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.frm-page-header__actions .button {
+	border-radius: $frm-radius-sm;
+	font-weight: 600;
+}
+
+.frm-page-header__status-form {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+/* Native list tables: soften the default boxed look */
+
+.frm-admin-page .wp-list-table {
+	border: 1px solid $frm-border;
+	border-radius: $frm-radius;
+	overflow: hidden;
+	box-shadow: $frm-shadow;
+}
+
+.frm-admin-page .wp-list-table thead th,
+.frm-admin-page .wp-list-table thead td {
+	background: $frm-surface-subtle;
+	font-weight: 600;
+}
+
+.frm-admin-page .wp-list-table tbody tr:hover {
+	background: $frm-surface-subtle;
+}
+
+/* Status badges (Requests list + Submissions list) */
+
+.frm-badge {
+	display: inline-block;
+	padding: 3px 10px;
+	font-size: 12px;
+	font-weight: 600;
+	line-height: 1.6;
+	border-radius: 999px;
+	white-space: nowrap;
+}
+
+.frm-badge--published,
+.frm-badge--complete {
+	color: #0f7a3d;
+	background: #e2f6e9;
+}
+
+.frm-badge--draft {
+	color: $frm-muted;
+	background: #eceef1;
+}
+
+.frm-badge--incomplete {
+	color: #9a5b00;
+	background: #fdf0d5;
+}
+
+.frm-badge--reviewed {
+	color: $frm-primary-dark;
+	background: #e2ebfd;
+}
+
+.frm-badge--archived {
+	color: #6b6f76;
+	background: #ececec;
+}
+
+/* Shortcode chip with click-to-copy */
+
+.frm-shortcode {
+	display: inline-block;
+	padding: 4px 9px;
+	font-size: 12px;
+	cursor: pointer;
+	background: $frm-surface-subtle;
+	border: 1px solid $frm-border;
+	border-radius: $frm-radius-sm;
+	transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.frm-shortcode:hover {
+	background: #eef1f5;
+	border-color: #c7cbd4;
+}
+
+.frm-shortcode--copied {
+	color: #0f7a3d;
+	background: #e2f6e9;
+	border-color: #0f7a3d;
+}
+
+/* Dashboard */
+
+.frm-admin-page .frm-dashboard-intro {
+	max-width: 640px;
+	color: $frm-muted;
+	font-size: 14px;
+}
+
+.frm-dashboard-cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 16px;
+	margin: 24px 0 28px;
+}
+
+.frm-dashboard-card {
+	display: flex;
+	flex-direction: column;
+	padding: 22px;
+	background: $frm-surface;
+	border: 1px solid $frm-border;
+	border-radius: $frm-radius;
+	box-shadow: $frm-shadow;
+	transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.frm-dashboard-card:hover {
+	box-shadow: $frm-shadow-md;
+	transform: translateY(-1px);
+}
+
+.frm-dashboard-card__value {
+	font-size: 2.1em;
+	font-weight: 700;
+	line-height: 1.2;
+	letter-spacing: -0.02em;
+	color: $frm-text;
+}
+
+.frm-dashboard-card__label {
+	margin-top: 6px;
+	color: $frm-muted;
+	font-size: 13px;
+	font-weight: 500;
+}
+
+.frm-admin-page .button-primary {
+	background: $frm-primary;
+	border-color: $frm-primary-dark;
+	border-radius: $frm-radius-sm;
+	font-weight: 600;
+	box-shadow: none;
+	text-shadow: none;
+}
+
+.frm-admin-page .button-primary:hover {
+	background: $frm-primary-dark;
+	border-color: $frm-primary-dark;
+}
+
+.frm-admin-page .button:not(.button-primary) {
+	border-radius: $frm-radius-sm;
+	font-weight: 600;
+}
+
+/* Submission detail */
+
+.frm-admin-page .postbox {
+	margin-bottom: 16px;
+	border: 1px solid $frm-border;
+	border-radius: $frm-radius;
+	box-shadow: $frm-shadow;
+	overflow: hidden;
+}
+
+.frm-admin-page .postbox > h2 {
+	margin: 0;
+	padding: 12px 16px;
+	background: $frm-surface-subtle;
+	border-bottom: 1px solid $frm-border;
+	font-size: 13px;
+}
+
+.frm-postbox-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+}
+
+.frm-files-received-heading {
+	margin: 24px 0 12px;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.frm-submission-overview .inside {
+	padding: 0;
+}
+
+.frm-submission-overview__grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.frm-submission-overview__grid > div {
+	padding: 20px 24px;
+}
+
+.frm-submission-overview__grid > div + div {
+	border-left: 1px solid $frm-border;
+}
+
+.frm-submission-overview__grid h3 {
+	margin: 0 0 12px;
+	font-size: 12px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.03em;
+	color: $frm-muted;
+}
+
+.frm-submission-overview__grid p {
+	margin: 0.6em 0;
+}
+
+/* Masonry-style packing: a plain 2-col grid would clamp every row to its
+   tallest item, leaving dead space under short file groups. Multi-column
+   flow lets each column fill to its own height instead. */
+
+.frm-files-grid {
+	column-count: 2;
+	column-gap: 16px;
+}
+
+.frm-files-grid .postbox {
+	break-inside: avoid;
+}
+
+@media (max-width: 960px) {
+
+	.frm-submission-overview__grid {
+		grid-template-columns: 1fr;
+	}
+
+	.frm-files-grid {
+		column-count: 1;
+	}
+
+	.frm-submission-overview__grid > div + div {
+		border-left: none;
+		border-top: 1px solid $frm-border;
+	}
+}
+
+.frm-status-form__row select {
+	flex: 1;
+}
+
+.frm-requested-files-checklist {
+	margin: 0 0 24px;
+	padding: 0;
+	list-style: none;
+}
+
+.frm-requested-files-checklist li {
+	padding: 8px 0;
+	border-bottom: 1px solid $frm-surface-subtle;
+}
+
+.frm-requested-files-checklist li:last-child {
+	border-bottom: none;
+}
+
+.frm-admin-page .widefat {
+	border: 1px solid $frm-border;
+	border-radius: $frm-radius-sm;
+	overflow: hidden;
+	box-shadow: $frm-shadow;
+}
+
+.frm-admin-page .widefat thead th {
+	background: $frm-surface-subtle;
+}
+
+@media (max-width: 782px) {
+
+	.frm-submission-detail {
+		grid-template-columns: 1fr;
+	}
+}

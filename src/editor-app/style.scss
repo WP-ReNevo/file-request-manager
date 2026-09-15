@@ -1,0 +1,838 @@
+/**
+ * Styles for the admin "Create/Edit File Request" React app.
+ *
+ * Layered on top of wp-components (already enqueued as a dependency by
+ * Assets::enqueue_admin_assets()), but overrides its default control styling
+ * for a more modern, consistent look — see the `frm-control-labels` mixin
+ * below, applied both to the page and to the Modal (which portals outside
+ * the page root, so it needs its own scope: `.frm-requested-file-modal`).
+ */
+
+@use "../frontend-app/style";
+
+$frm-primary: #2563eb;
+$frm-primary-dark: #1d4ed8;
+$frm-text: #1e1e2e;
+$frm-muted: #6b7280;
+$frm-border: #e2e4e9;
+$frm-surface-subtle: #f8f9fb;
+$frm-radius: 10px;
+$frm-radius-sm: 6px;
+$frm-shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 1px 3px rgba(16, 24, 40, 0.06);
+$frm-shadow-md: 0 4px 10px rgba(16, 24, 40, 0.06), 0 2px 4px rgba(16, 24, 40, 0.04);
+
+@mixin frm-control-labels {
+
+	.components-base-control__label,
+	.components-input-control__label,
+	legend {
+		font-size: 12px !important;
+		font-weight: 600 !important;
+		color: $frm-muted !important;
+		text-transform: none !important;
+		letter-spacing: 0 !important;
+		margin-bottom: 6px !important;
+	}
+
+	.components-text-control__input,
+	.components-textarea-control__input,
+	textarea {
+		border-color: $frm-border;
+		border-radius: $frm-radius-sm;
+		box-shadow: none;
+		transition: border-color 0.15s ease, box-shadow 0.15s ease;
+	}
+
+	.components-text-control__input:focus,
+	.components-textarea-control__input:focus,
+	textarea:focus {
+		border-color: $frm-primary;
+		box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+	}
+
+	.components-button.is-primary {
+		background: $frm-primary;
+		border-radius: $frm-radius-sm;
+		box-shadow: none;
+	}
+
+	.components-button.is-primary:hover:not(:disabled) {
+		background: $frm-primary-dark;
+	}
+
+	.components-button.is-secondary {
+		box-shadow: inset 0 0 0 1px $frm-border;
+		border-radius: $frm-radius-sm;
+	}
+}
+
+.frm-editor-page {
+	margin: 0 0 0 -20px;
+	width: calc(100% + 20px);
+	padding: 0;
+	background: $frm-surface-subtle;
+}
+
+.frm-brand-header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	padding: 20px 0;
+	background: #fff;
+	border-bottom: 1px solid $frm-border;
+}
+
+.frm-brand-header__title {
+	font-size: 18px;
+	font-weight: 600;
+	color: $frm-text;
+}
+
+#frm-editor-app-root {
+
+	@include frm-control-labels;
+	color: $frm-text;
+}
+
+.frm-editor-app__loading {
+	display: flex;
+	justify-content: center;
+	padding: 80px 0;
+}
+
+.wp-editor-wrap {
+	width: 100%;
+}
+
+.wp-editor-wrap .wp-editor-container {
+	border-color: $frm-border;
+	border-radius: $frm-radius-sm;
+	overflow: hidden;
+}
+
+/* Start screen */
+
+.frm-start-screen {
+	max-width: 980px;
+	margin: 0 auto;
+	padding: 48px 32px;
+}
+
+.frm-start-screen h1 {
+	font-size: 28px;
+	font-weight: 700;
+	margin: 0 0 6px;
+	letter-spacing: -0.02em;
+}
+
+.frm-start-screen > p {
+	color: $frm-muted;
+	font-size: 15px;
+	margin: 0 0 28px;
+}
+
+.frm-start-screen__actions {
+	margin: 0 0 40px;
+}
+
+.frm-start-screen__actions .components-button.is-secondary {
+	padding: 10px 20px;
+	height: auto;
+	font-weight: 600;
+}
+
+.frm-start-screen h2 {
+	font-size: 13px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+	color: $frm-muted;
+	margin: 0 0 16px;
+}
+
+.frm-start-screen__templates {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+	gap: 16px;
+}
+
+.frm-template-card.components-card {
+	border: 1px solid $frm-border;
+	border-radius: $frm-radius;
+	box-shadow: $frm-shadow;
+	transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.frm-template-card.components-card:hover {
+	box-shadow: $frm-shadow-md;
+	transform: translateY(-1px);
+}
+
+.frm-template-card h3 {
+	margin: 0 0 6px;
+	font-size: 15px;
+	font-weight: 700;
+}
+
+.frm-template-card p {
+	color: $frm-muted;
+	font-size: 13px;
+	min-height: 36px;
+}
+
+.frm-template-card__button {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	margin-top: 8px;
+}
+
+/* Requested file modal (portals outside the root, needs its own @include) */
+
+.frm-requested-file-modal {
+
+	@include frm-control-labels;
+	width: 100%;
+	max-width: 560px;
+	border-radius: $frm-radius;
+}
+
+.frm-requested-file-modal .components-modal__header {
+	padding: 20px 24px;
+	border-bottom: 1px solid $frm-border;
+}
+
+.frm-requested-file-modal
+.components-modal__header
+.components-modal__header-heading {
+	font-size: 17px;
+	font-weight: 700;
+}
+
+.frm-requested-file-modal .components-modal__content {
+	padding: 24px;
+}
+
+.frm-requested-file-modal .components-base-control {
+	margin-bottom: 0;
+}
+
+.frm-requested-file-modal__types {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+// The frm-control-labels mixin (applied to the whole modal) sets a bare
+// `legend` selector's margin-bottom with !important; !important always wins
+// over specificity, so this override needs it too.
+.frm-requested-file-modal__types legend {
+	margin-bottom: 16px !important;
+}
+
+.frm-requested-file-modal__types-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 16px 16px;
+}
+
+.frm-requested-file-modal__size-row {
+	display: flex;
+	gap: 20px;
+}
+
+.frm-requested-file-modal__size-row > * {
+	flex: 1;
+}
+
+.frm-requested-file-modal .components-modal__children-container > * + * {
+	margin-top: 24px;
+}
+
+.frm-requested-file-modal__actions {
+	padding-top: 18px;
+	border-top: 1px solid $frm-border;
+}
+
+.frm-requested-file-modal__actions .components-button {
+	border-radius: $frm-radius-sm;
+	font-weight: 600;
+	height: 36px;
+	padding: 0 18px;
+}
+
+/* Editor screen */
+
+.frm-editor-screen {
+	max-width: 1520px;
+	margin: 0 auto;
+	padding: 0 32px 64px;
+}
+
+.frm-editor-screen__body {
+	display: grid;
+	grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+	align-items: start;
+	gap: 32px;
+}
+
+@media (max-width: 1100px) {
+
+	.frm-editor-screen__body {
+		grid-template-columns: 1fr;
+	}
+}
+
+// Full-width tab bar, sitting above both the tab-content and live-preview
+// columns — with the full page width to work with, it has room for every
+// tab without needing horizontal scroll; overflow-x stays as a defensive
+// fallback for narrow viewports or a future longer tab list.
+.frm-editor-screen__tabbar {
+	display: flex;
+	gap: 4px;
+	flex-wrap: nowrap;
+	overflow-x: auto;
+	margin-top: 20px;
+	border-bottom: 1px solid $frm-border;
+}
+
+.frm-editor-screen__tab {
+	padding: 10px 4px;
+	margin-right: 24px;
+	background: none;
+	border: none;
+	border-bottom: 2px solid transparent;
+	font-size: 14px;
+	font-weight: 600;
+	color: $frm-muted;
+	white-space: nowrap;
+	cursor: pointer;
+	transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.frm-editor-screen__tab:hover {
+	color: $frm-text;
+}
+
+.frm-editor-screen__tab--active,
+.frm-editor-screen__tab--active:hover {
+	color: $frm-text;
+	border-bottom-color: $frm-primary;
+}
+
+.frm-editor-screen__tab-content {
+	min-width: 0;
+	padding-top: 24px;
+}
+
+.frm-editor-screen .components-card {
+	margin-bottom: 20px;
+	border: 1px solid $frm-border;
+	border-radius: $frm-radius;
+	box-shadow: $frm-shadow;
+	overflow: hidden;
+}
+
+.frm-editor-screen .components-card-header,
+.frm-editor-screen .components-card__header {
+	font-weight: 700;
+	font-size: 14px;
+}
+
+.frm-editor-screen .components-card-body {
+	padding: 20px;
+}
+
+.frm-editor-screen .components-card-body > * + * {
+	margin-top: 20px;
+}
+
+.frm-editor-screen .components-base-control {
+	margin-bottom: 0;
+}
+
+/* Publish bar */
+
+.frm-publish-bar {
+	position: sticky;
+	top: 32px;
+	z-index: 10;
+	padding: 18px 32px;
+	background: rgba(255, 255, 255, 0.92);
+	backdrop-filter: saturate(180%) blur(10px);
+	border-bottom: 1px solid $frm-border;
+	box-shadow: 0 1px 0 rgba(16, 24, 40, 0.02);
+}
+
+.frm-publish-bar__row {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+	max-width: 1520px;
+	margin: 0 auto;
+}
+
+.frm-publish-bar__title a {
+	display: inline-flex;
+	align-items: center;
+	margin-bottom: 6px;
+	font-size: 13px;
+	font-weight: 600;
+	color: $frm-muted;
+	text-decoration: none;
+}
+
+.frm-publish-bar__title a:hover {
+	color: $frm-primary;
+}
+
+.frm-publish-bar__title h1 {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin: 0;
+	font-size: 20px;
+	font-weight: 700;
+	letter-spacing: -0.01em;
+	color: $frm-text;
+}
+
+.frm-publish-bar__actions {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.frm-publish-bar__actions .components-button {
+	border-radius: $frm-radius-sm;
+	font-weight: 600;
+	height: 36px;
+	padding: 0 16px;
+}
+
+/* Requested files builder */
+
+.frm-requested-files-builder__empty {
+	padding: 40px 24px;
+	text-align: center;
+	color: $frm-muted;
+	background: $frm-surface-subtle;
+	border: 1px dashed $frm-border;
+	border-radius: $frm-radius;
+}
+
+.frm-requested-files-builder__list {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	margin-bottom: 20px;
+}
+
+.frm-requested-file-card.components-card {
+	border: 1px solid $frm-border;
+	border-radius: $frm-radius;
+	box-shadow: $frm-shadow;
+	transition: box-shadow 0.15s ease;
+}
+
+.frm-requested-file-card.components-card:hover {
+	box-shadow: $frm-shadow-md;
+}
+
+.frm-requested-file-card-wrapper {
+	border-radius: $frm-radius;
+}
+
+.frm-requested-file-card--dragging {
+	opacity: 0.5;
+}
+
+.frm-requested-file-card--drag-over {
+	box-shadow: 0 0 0 2px $frm-primary, $frm-shadow-md;
+}
+
+.frm-drag-handle {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 24px;
+	height: 24px;
+	margin-top: 2px;
+	color: $frm-muted;
+	font-size: 16px;
+	line-height: 1;
+	cursor: grab;
+	border-radius: $frm-radius-sm;
+}
+
+.frm-drag-handle:hover {
+	color: $frm-text;
+	background: $frm-surface-subtle;
+}
+
+.frm-drag-handle:active {
+	cursor: grabbing;
+}
+
+.frm-drag-handle:focus-visible {
+	outline: 2px solid $frm-primary;
+	outline-offset: 1px;
+}
+
+.frm-requested-file-card__meta {
+	color: $frm-muted;
+	font-size: 13px;
+}
+
+.frm-requested-files-builder > .components-button {
+	padding: 8px 18px;
+	height: auto;
+}
+
+/* Contact fields */
+
+.frm-contact-field-row {
+	padding: 12px 0;
+	border-bottom: 1px solid $frm-surface-subtle;
+}
+
+.frm-contact-field-row:last-child {
+	border-bottom: none;
+}
+
+/* Notifications */
+
+.frm-notifications-section {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.frm-notifications-section__row {
+	display: flex;
+	gap: 20px;
+}
+
+.frm-notifications-section__row .components-base-control {
+	flex: 1;
+}
+
+.frm-placeholder-chips {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 6px;
+	padding: 10px 12px;
+	background: $frm-surface-subtle;
+	border-radius: $frm-radius-sm;
+}
+
+.frm-placeholder-chips__label {
+	margin-right: 4px;
+	font-size: 12.5px;
+	color: $frm-muted;
+}
+
+.frm-placeholder-chip.components-button {
+	font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+	font-size: 12px;
+	color: $frm-primary-dark;
+	background: rgba(37, 99, 235, 0.08);
+	border: none;
+	box-shadow: none;
+}
+
+.frm-placeholder-chip.components-button:hover {
+	color: $frm-primary-dark;
+	background: rgba(37, 99, 235, 0.16);
+}
+
+/* Preview panel */
+
+.frm-preview-panel .components-modal__content {
+	background: $frm-surface-subtle;
+	padding: 24px;
+}
+
+.frm-preview-panel__toolbar {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	padding: 12px 18px;
+	background: #14141f;
+	color: #fff;
+	border-radius: $frm-radius;
+	margin-bottom: 20px;
+}
+
+.frm-preview-panel__banner {
+	margin: 0;
+	font-weight: 600;
+	font-size: 13px;
+}
+
+.frm-preview-panel__viewport {
+	display: flex;
+	justify-content: center;
+}
+
+.frm-preview-panel__viewport--mobile .frm-frontend-root {
+	max-width: 375px;
+	border: 1px solid $frm-border;
+	border-radius: 16px;
+	box-shadow: $frm-shadow-md;
+}
+
+/* Persistent live preview (sidebar next to every editor tab) */
+
+.frm-live-preview {
+	position: sticky;
+	top: 116px;
+	margin-top: 24px;
+}
+
+.frm-live-preview__frame {
+	max-width: none;
+	max-height: calc(100vh - 180px);
+	overflow-y: auto;
+	padding: 20px;
+	border: 1px solid $frm-border;
+	border-radius: $frm-radius;
+	box-shadow: $frm-shadow;
+}
+
+.frm-live-preview__notice {
+	margin: 0 0 12px;
+	padding: 8px 12px;
+	font-size: 12.5px;
+	color: #7a4b00;
+	background: #fff6e5;
+	border-radius: $frm-radius-sm;
+}
+
+.frm-live-preview__email-tabs .components-tab-panel__tabs {
+	margin-bottom: 12px;
+}
+
+.frm-live-preview__email-frame {
+	width: 100%;
+	height: calc(100vh - 260px);
+	min-height: 420px;
+	background: #fff;
+	border: 1px solid $frm-border;
+	border-radius: $frm-radius;
+	box-shadow: $frm-shadow;
+}
+
+/* Form Design tab */
+
+.frm-form-design-section__heading {
+	margin: 0 0 4px;
+	font-size: 15px;
+	font-weight: 700;
+	color: $frm-text;
+}
+
+.frm-form-design-section__hint {
+	margin: 0 0 16px;
+	font-size: 13px;
+	color: $frm-muted;
+}
+
+.frm-layout-picker {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 16px;
+	margin-bottom: 24px;
+}
+
+.frm-layout-picker-card.components-card {
+	margin: 0;
+	border: 1px solid $frm-border;
+	border-radius: $frm-radius;
+	box-shadow: $frm-shadow;
+	transition: box-shadow 0.15s ease, transform 0.15s ease, border-color 0.15s ease;
+}
+
+.frm-layout-picker-card.components-card:hover {
+	box-shadow: $frm-shadow-md;
+	transform: translateY(-1px);
+}
+
+.frm-layout-picker-card--active.components-card {
+	border-color: $frm-primary;
+	box-shadow: 0 0 0 1px $frm-primary, $frm-shadow-md;
+}
+
+.frm-layout-picker-card__button {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	padding: 0;
+	text-align: center;
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+
+.frm-layout-picker-card__label {
+	font-size: 15px;
+	font-weight: 700;
+	color: $frm-text;
+}
+
+.frm-layout-picker-card__description {
+	margin-top: 4px;
+	font-size: 13px;
+	color: $frm-muted;
+}
+
+.frm-layout-options-panel.components-card {
+	margin: 0 0 24px;
+}
+
+.frm-design-presets {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 16px;
+	margin-bottom: 24px;
+}
+
+.frm-design-preset-card.components-card {
+	margin: 0;
+	border: 1px solid $frm-border;
+	border-radius: $frm-radius;
+	box-shadow: $frm-shadow;
+	transition: box-shadow 0.15s ease, transform 0.15s ease, border-color 0.15s ease;
+}
+
+.frm-design-preset-card.components-card:hover {
+	box-shadow: $frm-shadow-md;
+	transform: translateY(-1px);
+}
+
+.frm-design-preset-card--active.components-card {
+	border-color: $frm-primary;
+	box-shadow: 0 0 0 1px $frm-primary, $frm-shadow-md;
+}
+
+.frm-design-preset-card__button {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	padding: 0;
+	text-align: center;
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+
+.frm-layout-icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 36px;
+	height: 36px;
+	margin-bottom: 10px;
+	color: $frm-muted;
+}
+
+.frm-layout-icon svg {
+	width: 100%;
+	height: 100%;
+}
+
+.frm-layout-icon--swatch {
+	width: 40px;
+	height: 40px;
+	padding: 9px;
+	color: #fff;
+	border-radius: 50%;
+	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+.frm-design-preset-card--active .frm-layout-icon--swatch {
+	box-shadow: 0 0 0 2px #fff, 0 0 0 4px $frm-primary;
+}
+
+.frm-layout-picker-card--active .frm-layout-icon {
+	color: $frm-primary;
+}
+
+.frm-design-preset-card__text {
+	display: flex;
+	flex-direction: column;
+}
+
+.frm-design-preset-card__label {
+	font-size: 15px;
+	font-weight: 700;
+	color: $frm-text;
+}
+
+.frm-design-preset-card__description {
+	margin-top: 4px;
+	font-size: 13px;
+	color: $frm-muted;
+}
+
+.frm-custom-design-panel {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.frm-custom-design-panel .components-card {
+	margin: 0;
+}
+
+/* Text & Labels tab */
+
+.frm-text-labels-section {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.frm-text-labels-section .components-card {
+	margin: 0;
+}
+
+.frm-text-labels-section .components-card-header h3 {
+	margin: 0;
+	font-size: 14px;
+	font-weight: 700;
+}
+
+.frm-custom-design-panel .components-card-header h3 {
+	margin: 0;
+	font-size: 14px;
+	font-weight: 700;
+}
+
+.frm-custom-design-panel__colors {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 16px;
+}
+
+.frm-color-field__toggle.components-button {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	width: 100%;
+	justify-content: flex-start;
+	font-family: monospace;
+	text-transform: uppercase;
+}
+
+.frm-color-field__popover {
+	padding: 16px;
+}

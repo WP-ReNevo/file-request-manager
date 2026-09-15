@@ -1,0 +1,159 @@
+/**
+ * Styles for the admin Settings React app. A small, self-contained token
+ * set matching editor-app's design language (same values, kept local since
+ * this is a separate webpack entry/bundle).
+ */
+
+$frm-primary: #2563eb;
+$frm-primary-dark: #1d4ed8;
+$frm-text: #1e1e2e;
+$frm-muted: #6b7280;
+$frm-border: #e2e4e9;
+$frm-radius: 10px;
+$frm-radius-sm: 6px;
+$frm-shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 1px 3px rgba(16, 24, 40, 0.06);
+
+.frm-settings-page {
+	margin: 0 0 0 -20px;
+	width: calc(100% + 20px);
+	background: #fff;
+}
+
+.frm-brand-header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	padding: 20px 0;
+	background: #fff;
+	border-bottom: 1px solid $frm-border;
+}
+
+.frm-brand-header__title {
+	font-size: 18px;
+	font-weight: 600;
+	color: $frm-text;
+}
+
+/* Sticky page header, matching the other admin screens' .frm-page-header */
+
+.frm-page-header {
+	position: sticky;
+	top: 32px;
+	z-index: 10;
+	padding: 18px 32px;
+	background: rgba(255, 255, 255, 0.92);
+	backdrop-filter: saturate(180%) blur(10px);
+	border-bottom: 1px solid $frm-border;
+	box-shadow: 0 1px 0 rgba(16, 24, 40, 0.02);
+}
+
+.frm-page-header__row {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+	max-width: 760px;
+	margin: 0 auto;
+}
+
+.frm-page-header__title h1 {
+	margin: 0;
+	font-size: 20px;
+	font-weight: 700;
+	letter-spacing: -0.01em;
+	color: $frm-text;
+}
+
+#frm-settings-app-root {
+	display: block;
+	color: $frm-text;
+
+	.components-base-control__label,
+	.components-input-control__label,
+	legend {
+		font-size: 12px;
+		font-weight: 600;
+		color: $frm-muted;
+		text-transform: none;
+		letter-spacing: 0;
+		margin-bottom: 6px;
+	}
+
+	.components-text-control__input {
+		border-color: $frm-border;
+		border-radius: $frm-radius-sm;
+		box-shadow: none;
+		transition: border-color 0.15s ease, box-shadow 0.15s ease;
+	}
+
+	.components-text-control__input:focus {
+		border-color: $frm-primary;
+		box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+	}
+
+	.components-button.is-primary {
+		background: $frm-primary;
+		border-radius: $frm-radius-sm;
+		box-shadow: none;
+	}
+
+	.components-button.is-primary:hover:not(:disabled) {
+		background: $frm-primary-dark;
+	}
+}
+
+.frm-settings-app__loading {
+	display: flex;
+	justify-content: center;
+	padding: 80px 0;
+}
+
+.frm-settings-app {
+	max-width: 760px;
+	margin: 0 auto;
+	padding: 32px 20px 64px;
+}
+
+.frm-settings-app__notice {
+	margin-bottom: 16px;
+}
+
+.frm-settings-app .components-card {
+	margin-bottom: 20px;
+	border: 1px solid $frm-border;
+	border-radius: $frm-radius;
+	box-shadow: $frm-shadow;
+	overflow: hidden;
+}
+
+.frm-settings-app .components-card-header h2 {
+	margin: 0;
+	font-size: 14px;
+	font-weight: 700;
+}
+
+.frm-settings-app .components-card-body {
+	padding: 20px;
+}
+
+.frm-settings-app .components-card-body > * + * {
+	margin-top: 20px;
+}
+
+.frm-settings-app .components-base-control {
+	margin-bottom: 0;
+}
+
+.frm-settings-app__type-picker {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+.frm-settings-app__type-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+	gap: 8px 16px;
+}
