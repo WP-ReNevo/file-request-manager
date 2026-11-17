@@ -4,7 +4,7 @@ Tags: file upload, file request, document upload, client documents, gutenberg
 Requires at least: 6.4
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -128,6 +128,9 @@ Not by default. Uninstalling the plugin (not just deactivating it) leaves all yo
 
 == Changelog ==
 
+= 1.0.1 =
+* Added a Settings link on the Plugins screen.
+
 = 1.0.0 =
 * Initial release.
 * Create, edit, duplicate, and publish File Requests with a list of specific requested files (title, description, required flag, allowed types, max size, max files).
@@ -141,6 +144,9 @@ Not by default. Uninstalling the plugin (not just deactivating it) leaves all yo
 * Built-in privacy exporter and eraser (WordPress Privacy tools), configurable submission retention, and an opt-in "delete all data on uninstall" setting.
 
 == Upgrade Notice ==
+
+= 1.0.1 =
+Adds a Settings shortcut on the Plugins screen.
 
 = 1.0.0 =
 Initial release.

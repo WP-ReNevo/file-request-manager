@@ -79,4 +79,26 @@ class AdminMenu {
 			array( new EditorPage(), 'render' )
 		);
 	}
+
+	/**
+	 * Adds a "Settings" link to the plugin row on the Plugins screen.
+	 *
+	 * @param string[] $links Existing action links.
+	 * @return string[]
+	 */
+	public function add_plugin_action_links( $links ) {
+		if ( ! current_user_can( Capabilities::capability() ) ) {
+			return $links;
+		}
+
+		$settings_link = sprintf(
+			'<a href="%s">%s</a>',
+			esc_url( admin_url( 'admin.php?page=' . self::SLUG_SETTINGS ) ),
+			esc_html__( 'Settings', 'renevo-file-request-manager' )
+		);
+
+		array_unshift( $links, $settings_link );
+
+		return $links;
+	}
 }

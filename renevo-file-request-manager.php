@@ -2,7 +2,7 @@
 /**
  * Plugin Name:       ReNevo File Request Manager
  * Description:       Request specific files from clients, customers and visitors. Tell them exactly what you need, let them upload it, and receive everything in one place.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Requires at least: 6.4
  * Requires PHP:      7.4
  * Author:            ReNevo
@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'RENEVO_VERSION', '1.0.0' );
+define( 'RENEVO_VERSION', '1.0.1' );
 define( 'RENEVO_DB_VERSION', '1.0.0' );
 define( 'RENEVO_FILE', __FILE__ );
 define( 'RENEVO_PATH', plugin_dir_path( __FILE__ ) );

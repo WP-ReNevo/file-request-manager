@@ -100,6 +100,7 @@ final class Plugin {
 		add_action( 'rest_api_init', array( $this->get( PublicController::class ), 'register_routes' ) );
 
 		add_action( 'admin_menu', array( $this->get( AdminMenu::class ), 'register_menu' ) );
+		add_filter( 'plugin_action_links_' . RENEVO_BASENAME, array( $this->get( AdminMenu::class ), 'add_plugin_action_links' ) );
 		add_action( 'admin_enqueue_scripts', array( $this->get( Assets::class ), 'enqueue_admin_assets' ) );
 		add_action( 'enqueue_block_editor_assets', array( $this->get( Assets::class ), 'enqueue_block_editor_assets' ) );
 		add_action( 'wp_enqueue_scripts', array( $this->get( Assets::class ), 'enqueue_frontend_assets' ) );
